@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "rgs",
+      "version": "0.3.255.40792",
+      "templateHash": "13304500632967305430"
+    }
+  },
+  "parameters": {
+    "resourceGroupPrefrix": {
+      "type": "string",
+      "defaultValue": "PREFIX"
+    }
+  },
+  "functions": [],
+  "resources": [
+    {
+      "type": "Microsoft.Resources/resourceGroups",
+      "apiVersion": "2018-05-01",
+      "name": "[format('{0}[NAME-RG]', parameters('resourceGroupPrefrix'))]",
+      "location": "westeurope"
+    },
+    {
+      "type": "Microsoft.Resources/resourceGroups",
+      "apiVersion": "2018-05-01",
+      "name": "[format('{0}[NAME2-RG]', parameters('resourceGroupPrefrix'))]",
+      "location": "westeurope"
+    },
+    {
+      "type": "Microsoft.Resources/resourceGroups",
+      "apiVersion": "2018-05-01",
+      "name": "[format('{0}[NAME3-RG]', parameters('resourceGroupPrefrix'))]",
+      "location": "westeurope"
+    },
+    {
+      "type": "Microsoft.Resources/resourceGroups",
+      "apiVersion": "2018-05-01",
+      "name": "[format('{0}[NAME4-RG]', parameters('resourceGroupPrefrix'))]",
+      "location": "westeurope"
+    }
+  ]
+}
